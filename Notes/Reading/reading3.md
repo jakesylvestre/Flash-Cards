@@ -1,2 +1,2 @@
 * understanding interpreters
-I'll do this tommorow
+I'll do this tommorow- left off here: file:///Users/Jake_Sylvestre/Documents/MIT-Introduction-to-Electrical-Engineering-and-Computer-Science-I/Course%20Materials/6-01sc-spring-2011/contents/unit-1-software-engineering/object-oriented-programming/MIT6_01SCS11_chap03.pdf
