@@ -1,3 +1,5 @@
+Chapter one of a Book as seen Here
+/MIT-Introduction-to-Electrical-Engineering-and-Computer-Science-I/Course%20Materials/6-01sc-spring-2011/contents/unit-1-software-engineering/object-oriented-programming/index.htm
 ## Reading:
 *1.1 - code better, model systems
 *1.2.1- we're not learning how components of systems work, or how to design them but how the combined system functions
