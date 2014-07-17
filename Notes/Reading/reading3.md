@@ -11,3 +11,4 @@ Printer is the output #Where in this does it get sent down to lower levels, if I
 *Simulating an interpreter sucks (I've done it before)
 #3.1
 *Non-Local Refferences- var search takes the most local var and uses it
+*In Summation, there was very little I didn't know in that reading.
