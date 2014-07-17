@@ -16,3 +16,8 @@ interviews (No substitute there)
 Two midterms and a final exam
 * Python is a design language (wtf? Why didn't he just use perl)
 * idle promps, reads, understandss
+*Instance- inherits class structure		
+* Naming operations - def (procedure) variables are for naming data structures, classes are named class name():
+* builds enviorment for program execution, python is association links all variables are refferences
+* evaluate(right) -> bind(left) ->change current enviorment
+* Procedures are outside the enviorment
