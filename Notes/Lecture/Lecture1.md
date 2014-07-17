@@ -21,3 +21,5 @@ Two midterms and a final exam
 * builds enviorment for program execution, python is association links all variables are refferences
 * evaluate(right) -> bind(left) ->change current enviorment
 * Procedures are outside the enviorment
+* Garbage cleanup deletes enviorment after operation
+*Class -> Common Data -> Less common data -> less common data -> person specific all as instances of eachother
