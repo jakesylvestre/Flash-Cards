@@ -1,0 +1,80 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+    font-family: 'AlexBrushRegular';
+    src: url('../fonts/AlexBrush-Regular-OTF-webfont.eot');
+    src: url('../fonts/AlexBrush-Regular-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.woff') format('woff'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.ttf') format('truetype'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.svg#AlexBrushRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+.hero-unit { 
+
+	background-color:#EDE275;
+}
+
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+
+#push,
+#footer {
+    height: 60px;
+}
+
+/*.brand {
+    font-family: AlexBrushRegular, Arial, sans-serif;
+    letter-spacing: 0;
+    color: #89cff0;
+}*/
+
+
+.register-message { text-align:center;  width:40%;}
+
+.about-text { border:1px solid #EEE; }
+.about-text p { padding:24px 0; }
+
+.student-dashboard .nav { margin-bottom:0; }
+
+.comments-form { border-left:1px solid #CCC; margin:0.1px; padding:24px;}
+
+
+.navbar.navbar-inverse.navbar-fixed-top { margin-bottom:224px;}
+.navbar-inverse .navbar-inner { background: #292929 none; }
+
+h1 { margin-top:60px;}
+
+
+.logo { background:transparent url(../img/flash-moustache-logo.png) 0 -20px no-repeat; height:70px; width:200px; display:inline-block;} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
