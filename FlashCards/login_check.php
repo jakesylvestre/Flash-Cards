@@ -3,13 +3,12 @@
 $host="localhost"; // Host name 
 $username="jakesyl"; // username 
 $password="testme"; // password 
-$db_name="test"; // DB name 
+$db_name="members"; // DB name 
 $tbl_name="members"; // Table name 
 
-$conn_string = "host= " + $localhost + "dbname= " + $db_name + " user= " + $username + " password = " + $password;
 
 // Connect to server and select databse.
-pg_connect($conn_string) or die "can't connect";
+mysql_connect("host= " + $localhost + "dbname= " + $db_name + " user= " + $username + " password = " + $password) or die "can't connect";//this may be deprecated, i'll check later
 // username and password sent from form 
 $username=$_POST['username']; 
 $mypassword=$_POST['mypassword']; 
