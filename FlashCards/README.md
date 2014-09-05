@@ -1,4 +1,0 @@
-FlashCards
-==========
-
-Hackathon project
