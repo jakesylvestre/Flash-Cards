@@ -17,4 +17,4 @@ Developed by @mrjopino
 <input type="submit" value="Registrar" title="Registra tu cuenta">
 </form>
 </div>
-</html>
+</html> 
