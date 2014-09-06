@@ -1,15 +1,24 @@
 <?php
-
+/*
+DB STRUCT:
+CREATE TABLE members
+(
+    id int,
+    username varchar(255),
+    password varchar(255)
+)*/
+//Encrypt passwords? Nah, I'll do it later ;)
+//test connections later, code now?
 ob_start();
 $host="localhost"; // Host name 
-$username=""; // Mysql username 
-$password=""; // Mysql password 
-$db_name="test"; // Database name 
+$username="replace_this"; // Mysql username 
+$password="replace_me"; // Mysql password 
+$db_name="replace_this"; // Database name; note to anyone it's bad practice to have this the same as other stuff
 $tbl_name="members"; // Table name 
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+$link = mysql_connect($host , $username, $db_name);//Add or die please
+mysql_select_db($db_name)or die("cannot select DB");
 
 // Define $myusername and $mypassword 
 $myusername=$_POST['myusername']; 
