@@ -16,6 +16,7 @@ $password="replace_me"; // Mysql password
 $db_name="replace_this"; // Database name; note to anyone it's bad practice to have this the same as other stuff
 $tbl_name="members"; // Table name 
 
+
 // Connect to server and select databse.
 $link = mysqli_connect($host, $username, $password, $db_name);//Add or die please
 // Check connection 
@@ -26,8 +27,8 @@ $mypassword=$_POST['mypassword'];
 // To protect SQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
 $mypassword = stripslashes($mypassword);
-$myusername = mysql_real_escape_string($myusername);
-$mypassword = mysql_real_escape_string($mypassword);
+$myusername = mysqli_real_escape_string($myusername);
+$mypassword = mysqli_real_escape_string($mypassword);
 $mypassword = password_hash($mypassword, PASSWORD_DEFAULT);
 $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
 $result=mysql_query($sql);
