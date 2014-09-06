@@ -19,12 +19,8 @@ $tbl_name="members"; // Table name
 // Connect to server and select databse.
 $link = mysqli_connect($host, $username, $password, $db_name);//Add or die please
 // Check connection 
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  mysqli_close($link)//"Fuck that connection"
-}
-// Define $myusername and $mypassword 
-$myusername=$_POST['myusername']; 
+
+$myusername=$_POST['myusername']; // Define $myusername and $mypassword 
 $mypassword=$_POST['mypassword']; 
 
 // To protect SQL injection (more detail about MySQL injection)
