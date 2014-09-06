@@ -28,11 +28,12 @@ $link = mysqli_connect($host, $username, $password, $db_name);//Add or die pleas
 $myusername=$_POST['myusername']; // Define $myusername and $mypassword 
 $mypassword=$_POST['mypassword']; 
 
+$stbe = "NUL (ASCII 0), \n, \r, \, ', \",";//strings to be encoded
 // To protect SQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
 $mypassword = stripslashes($mypassword);
-$myusername = mysqli_real_escape_string($myusername);
-$mypassword = mysqli_real_escape_string($mypassword);
+$myusername = mysqli_real_escape_string($myusername, $stbe);
+$mypassword = mysqli_real_escape_string($mypassword, $stbe);
 $mypassword = password_hash($mypassword, PASSWORD_DEFAULT);
 $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
 $result=mysql_query($sql);
