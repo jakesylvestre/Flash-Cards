@@ -17,9 +17,12 @@ $db_name="replace_this"; // Database name; note to anyone it's bad practice to h
 $tbl_name="members"; // Table name 
 
 // Connect to server and select databse.
-$link = mysql_connect($host , $username, $db_name);//Add or die please
-mysql_select_db($db_name)or die("cannot select DB");
-
+$link = mysqli_connect($host, $username, $password, $db_name);//Add or die please
+// Check connection 
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  mysqli_close($link)//"Fuck that connection"
+}
 // Define $myusername and $mypassword 
 $myusername=$_POST['myusername']; 
 $mypassword=$_POST['mypassword']; 
@@ -56,4 +59,6 @@ else {
 echo "Wrong Username or Password";
 }
 ob_end_flush();
+mysqli_close($link)//"Fuck that connection"
+
 ?>
