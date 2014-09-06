@@ -16,6 +16,10 @@ $password="replace_me"; // Mysql password
 $db_name="replace_this"; // Database name; note to anyone it's bad practice to have this the same as other stuff
 $tbl_name="members"; // Table name 
 
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 
 // Connect to server and select databse.
 $link = mysqli_connect($host, $username, $password, $db_name);//Add or die please
