@@ -99,10 +99,10 @@ $myusername = mysqli_real_escape_string($link, $myusername);
 $mypassword = mysqli_real_escape_string($link, $mypassword);
 $mypassword = password_hash($mypassword, PASSWORD_DEFAULT);
 $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
-$result=mysqli_query($sql);
+$result=mysqli_query($link, $sql);
 
 // Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
+$count=mysqli_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
