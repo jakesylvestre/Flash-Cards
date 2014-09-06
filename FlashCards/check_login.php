@@ -26,17 +26,9 @@ $mypassword=$_POST['mypassword'];
 // To protect SQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
 $mypassword = stripslashes($mypassword);
-//prepare query for execution
-$result = pg_prepare($dbconn, "query", 'SELECT * FROM shops WHERE name = $1');
-// Execute the prepared query.  Note that it is not necessary to escape
-$result = pg_execute($dbconn, "query", array(""));
-// To protect MySQL injection (more detail about MySQL injection)
-$myusername = stripslashes($myusername);
-$mypassword = stripslashes($mypassword);
 $myusername = mysql_real_escape_string($myusername);
 $mypassword = mysql_real_escape_string($mypassword);
 $mypassword = password_hash($mypassword, PASSWORD_DEFAULT);
-
 $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
 $result=mysql_query($sql);
 
