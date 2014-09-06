@@ -57,7 +57,7 @@ function testPassword($password)
     $strength += count($numbers[0]);
 
     /*** check for special chars ***/
-    preg_match_all('/[|!@#$%&*\/=?,;.:\-_+~^\\\]/', $password, $specialchars);
+    preg_match_all("'/[|!@#$%&*\/=?,;.:\-_+~^\\\]/'", $password, $specialchars);
     $strength += sizeof($specialchars[0]);
 
     /*** get the number of unique chars ***/
@@ -72,8 +72,6 @@ function testPassword($password)
     return $strength;
 }
 
-/*** example usage ***/
-$password = 'php_tutorials_and_examples!123';
-echo testPassword($password);
+print testPassword("Zq`8KjT5vn;P2~r57m7dg5g$x013nD")
 
 ?>
