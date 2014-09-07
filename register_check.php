@@ -26,9 +26,13 @@ if (mysqli_connect_errno()) {//Error TODO try to reconnect and put this in a loo
     exit();
 }
 
-$myemail=$_POST['myemail'];
-$myusername=$_POST['myusername'];
-$mypassword=$_POST['mypassword'];
+print isset($_POST['myemail']);
+$myemail=isset($_POST['myemail']);
+
+$myusername=($_POST['myusername']);
+$mypassword=($_POST['mypassword']);
+//help:
+
 
 // To protect SQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
