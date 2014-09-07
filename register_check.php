@@ -10,7 +10,7 @@ ob_start();//Don't output anything
 
 //Adding sql credentials
 $host="localhost";
-$username="replace_this"
+$username="replace_this";
 $password="replace_me"; 
 $db_name="replace_this"; 
 $tbl_name="members";
@@ -57,7 +57,7 @@ header("location:login_success.php");
 else {
 echo "Wrong Username or Password";
 }
-mysqli_close($link)//"Fuck that connection"
+mysqli_close($link); //"Fuck that connection"
 
 ob_end_flush();
 
