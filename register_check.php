@@ -6,33 +6,39 @@ password varchar(255)
 */
 require 'test_password.php';
 
-ob_start();
-$host="localhost"; // Host name 
-$username="replace_this"; // Mysql username 
-$password="replace_me"; // Mysql password 
-$db_name="replace_this"; // Database name; note to anyone it's bad practice to have this the same as other stuff
-$tbl_name="members"; // Table name 
+ob_start();//Don't output anything
 
-
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
+//Adding sql credentials
+$host="localhost";
+$username="replace_this"
+$password="replace_me"; 
+$db_name="replace_this"; 
+$tbl_name="members";
 
 // Connect to server and select databse.
 $link = mysqli_connect($host, $username, $password, $db_name);//Add or die please
 // Check connection 
 
-$myusername=$_POST['myusername']; // Define $myusername and $mypassword 
+
+if (mysqli_connect_errno()) {//Error TODO try to reconnect and put this in a loop
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+$myusername=$_POST['myusername']; 
 $mypassword=$_POST['mypassword']; 
 
 // To protect SQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
 $mypassword = stripslashes($mypassword);
+
 $myusername = mysqli_real_escape_string($link, $myusername);
 $mypassword = mysqli_real_escape_string($link, $mypassword);
+
 $mypassword = password_hash($mypassword, PASSWORD_DEFAULT);
+
 $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
+
 $result=mysqli_query($link, $sql);
 
 // Mysql_num_row is counting table row
@@ -42,14 +48,17 @@ $count=mysqli_num_rows($result);
 if($count==1){
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
+ 
 session_register("myusername");
 session_register("mypassword"); 
+
 header("location:login_success.php");
 }
 else {
 echo "Wrong Username or Password";
 }
-ob_end_flush();
 mysqli_close($link)//"Fuck that connection"
+
+ob_end_flush();
 
 ?>
